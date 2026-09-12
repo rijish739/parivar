@@ -1,0 +1,1 @@
+// Parivar entry route is maintained in the Lovable project source.

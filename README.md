@@ -1,2 +1,5 @@
-# parivar
-Parivar — a Bunt community matrimony application
+# Parivar
+
+Bunt community matrimony application.
+
+The complete project source is synced from Lovable.
