@@ -1,0 +1,164 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Parivar design system — warm, trustworthy palette rooted in South Indian
+ * tradition. Maroon (kumkum), gold (haldi/temple brass) and cream (rice) —
+ * deliberately unlike the bright reds/pinks of dating apps.
+ * All colors in oklch. Semantic tokens only — do not hardcode colors.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Cream page, deep ink text */
+  --background: oklch(0.977 0.014 84);         /* warm cream */
+  --foreground: oklch(0.24 0.04 30);           /* deep espresso-maroon */
+
+  --card: oklch(0.995 0.006 84);
+  --card-foreground: oklch(0.24 0.04 30);
+  --popover: oklch(0.995 0.006 84);
+  --popover-foreground: oklch(0.24 0.04 30);
+
+  /* Primary: deep maroon (kumkum) */
+  --primary: oklch(0.38 0.13 25);
+  --primary-foreground: oklch(0.977 0.014 84);
+
+  /* Secondary: warm sandalwood */
+  --secondary: oklch(0.93 0.03 75);
+  --secondary-foreground: oklch(0.32 0.08 30);
+
+  --muted: oklch(0.94 0.02 80);
+  --muted-foreground: oklch(0.46 0.04 40);
+
+  /* Accent: soft rose-clay */
+  --accent: oklch(0.9 0.05 40);
+  --accent-foreground: oklch(0.3 0.09 28);
+
+  /* Gold — temple brass. Use sparingly for highlights, borders, motifs. */
+  --gold: oklch(0.75 0.14 80);
+  --gold-foreground: oklch(0.24 0.04 30);
+
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.88 0.03 70);
+  --input: oklch(0.9 0.02 75);
+  --ring: oklch(0.55 0.14 30);
+
+  --sidebar: oklch(0.96 0.015 80);
+  --sidebar-foreground: oklch(0.24 0.04 30);
+  --sidebar-primary: oklch(0.38 0.13 25);
+  --sidebar-primary-foreground: oklch(0.977 0.014 84);
+  --sidebar-accent: oklch(0.92 0.03 75);
+  --sidebar-accent-foreground: oklch(0.3 0.09 28);
+  --sidebar-border: oklch(0.88 0.03 70);
+  --sidebar-ring: oklch(0.55 0.14 30);
+}
+
+.dark {
+  --background: oklch(0.18 0.02 30);
+  --foreground: oklch(0.95 0.015 80);
+  --card: oklch(0.22 0.03 28);
+  --card-foreground: oklch(0.95 0.015 80);
+  --popover: oklch(0.22 0.03 28);
+  --popover-foreground: oklch(0.95 0.015 80);
+  --primary: oklch(0.78 0.12 30);
+  --primary-foreground: oklch(0.2 0.04 28);
+  --secondary: oklch(0.28 0.04 28);
+  --secondary-foreground: oklch(0.95 0.015 80);
+  --muted: oklch(0.28 0.03 30);
+  --muted-foreground: oklch(0.72 0.02 60);
+  --accent: oklch(0.32 0.06 30);
+  --accent-foreground: oklch(0.95 0.015 80);
+  --gold: oklch(0.78 0.14 80);
+  --gold-foreground: oklch(0.2 0.04 28);
+  --destructive: oklch(0.65 0.2 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.3 0.03 30);
+  --input: oklch(0.32 0.03 30);
+  --ring: oklch(0.7 0.12 30);
+  --sidebar: oklch(0.2 0.03 28);
+  --sidebar-foreground: oklch(0.95 0.015 80);
+  --sidebar-primary: oklch(0.78 0.12 30);
+  --sidebar-primary-foreground: oklch(0.2 0.04 28);
+  --sidebar-accent: oklch(0.28 0.04 28);
+  --sidebar-accent-foreground: oklch(0.95 0.015 80);
+  --sidebar-border: oklch(0.3 0.03 30);
+  --sidebar-ring: oklch(0.7 0.12 30);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, .font-serif { font-family: var(--font-serif); letter-spacing: -0.01em; }
+}
+
+@utility bg-hero-warm {
+  background:
+    radial-gradient(1200px 600px at 15% -10%, oklch(0.92 0.06 60 / 0.55), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, oklch(0.85 0.09 40 / 0.4), transparent 55%),
+    linear-gradient(180deg, oklch(0.98 0.015 80) 0%, oklch(0.95 0.03 70) 100%);
+}
+
+@utility text-gold-gradient {
+  background: linear-gradient(135deg, oklch(0.72 0.14 80) 0%, oklch(0.5 0.12 30) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility border-gold-soft {
+  border-color: oklch(0.75 0.14 80 / 0.55);
+}

@@ -1,1 +1,5 @@
-{"project_id":"dc996015-0db5-4234-ab47-6e7edcea5c97"}
+{
+  "schemaVersion": 1,
+  "template": "tanstack_start_ts_current",
+  "revision": "tanstack_start_ts_current-ccb442fda9e9"
+}
