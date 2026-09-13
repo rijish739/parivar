@@ -14,3 +14,5 @@ Parivar is a matrimony application built exclusively for the Bunt community.
 Install dependencies with Bun, configure the required public environment variables, then run `bun run dev`.
 
 Private environment files and generated internal skill files are intentionally excluded from this repository.
+
+last updated 13/9/26
